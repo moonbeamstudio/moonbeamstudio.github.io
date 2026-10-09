@@ -302,3 +302,9 @@ em .w > span { background: linear-gradient(90deg, var(--gold), var(--gold2)); -w
   .lulu { transform: translateY(calc(var(--my, 0) * -40px)); }
   .rail.on .shots { padding: 10px 8vw 30px; gap: 36px; }
 }
+
+/* cartes en 3D : le navigateur ne découpe plus les coins arrondis (overflow) pendant l'inclinaison,
+   donc chaque calque porte lui-même ses coins, et l'image ne grossit plus au survol */
+.game > img, .game::before, .game::after { border-radius: inherit; }
+.game:hover > img { transform: none; }
+.game[data-tilt] { transform-style: flat; }
