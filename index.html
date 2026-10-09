@@ -10,11 +10,14 @@
 <meta property="og:image" content="https://moonbeamstudio.github.io/img/og-studio.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://moonbeamstudio.github.io/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Moonbeam Studio", "url": "https://moonbeamstudio.github.io/", "logo": "https://moonbeamstudio.github.io/img/logo.png", "email": "moonbeamstudio.contact@gmail.com"}</script>
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/fredoka-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
+<script src="i18n.js"></script>
 <script src="lang.js"></script>
 <script src="motion.js"></script>
 </head>
@@ -22,38 +25,40 @@
 <div class="sky"></div><div class="progress"></div><div class="glow"></div>
 
 <header class="nav"><div class="wrap">
-  <a class="brand" href="./"><img class="logo" src="img/logo.png" alt="" width="34" height="34">Moonbeam Studio</a>
+  <a class="brand" href="./"><img class="logo" src="img/logo-96.png" alt="" width="34" height="34">Moonbeam Studio</a>
   <nav>
-    <a href="#games" class="hide-s"><span lang="en">Games</span><span lang="fr">Jeux</span></a>
-    <a href="#studio" class="hide-s"><span lang="en">Studio</span><span lang="fr">Le studio</span></a>
-    <a href="#support"><span lang="en">Support</span><span lang="fr">Aide</span></a>
-    <button class="lang" aria-label="Language"><span lang="en">FR</span><span lang="fr">EN</span></button>
+    <a href="#games" class="hide-s"><span data-i="t0">Games</span></a>
+    <a href="#studio" class="hide-s"><span data-i="t1">Studio</span></a>
+    <a href="#support"><span data-i="t2">Support</span></a>
+    <label class="lang"><span class="sr">Language</span><select aria-label="Language">
+      <option value="en">EN</option><option value="fr">FR</option><option value="es">ES</option><option value="pt">PT</option><option value="de">DE</option><option value="it">IT</option><option value="ja">日本</option>
+    </select></label>
   </nav>
 </div></header>
 
 <main>
 <div class="wrap hero">
   <div>
-    <span class="eyebrow"><span lang="en">Independent game studio</span><span lang="fr">Studio de jeux indépendant</span></span>
-    <h1 data-words><span lang="en">Cozy little worlds, <em>built one tap at a time.</em></span><span lang="fr">De petits mondes douillets, <em>construits d’un doigt.</em></span></h1>
-    <p class="lead" data-r><span lang="en">We make relaxing idle tycoon games for iPhone, starring Lulu — a curious puppy who turns every place she visits into something magical.</span><span lang="fr">Nous créons des jeux de gestion idle relaxants pour iPhone, avec Lulu, une petite chienne curieuse qui rend magique chaque lieu qu’elle visite.</span></p>
+    <span class="eyebrow"><span data-i="t3">Independent game studio</span></span>
+    <h1 data-words><span data-i="t4">Cozy little worlds, <em>built one tap at a time.</em></span></h1>
+    <p class="lead" data-r><span data-i="t5">We make relaxing idle tycoon games for iPhone, starring Lulu — a curious puppy who turns every place she visits into something magical.</span></p>
     <div class="btns" data-r>
-      <a class="btn gold" href="#games"><span lang="en">Discover our games</span><span lang="fr">Découvrir nos jeux</span> →</a>
-      <a class="btn ghost" href="#support"><span lang="en">Get help</span><span lang="fr">Besoin d’aide ?</span></a>
+      <a class="btn gold" href="#games"><span data-i="t6">Discover our games</span> →</a>
+      <a class="btn ghost" href="#support"><span data-i="t7">Get help</span></a>
     </div>
   </div>
   <div class="stage" aria-hidden="true">
     <div class="orbit"></div><div class="orbit o2"></div><div class="moon"></div><img class="lulu" src="img/lulu-moon.webp" alt="Lulu sitting on the moon">
-    <div class="phone p1"><img src="img/park-1.webp" alt=""></div>
-    <div class="phone p2"><img src="img/museum-1.webp" alt=""></div>
+    <div class="phone p1"><video muted loop playsinline autoplay preload="auto" poster="img/park-1.webp" src="vid/park-1.mp4"></video></div>
+    <div class="phone p2"><video muted loop playsinline autoplay preload="auto" poster="img/museum-1.webp" src="vid/museum-1.mp4"></video></div>
   </div>
 </div>
 
 <section id="games"><div class="wrap">
   <div class="title">
-    <span class="eyebrow"><span lang="en">The Lulu series</span><span lang="fr">La série Lulu</span></span>
-    <h2 data-words><span lang="en">Our games</span><span lang="fr">Nos jeux</span></h2>
-    <p><span lang="en">Ten worlds are planned. Each one is a complete game you can enjoy at your own pace, offline, with no account needed.</span><span lang="fr">Dix mondes sont prévus. Chacun est un jeu complet, à savourer à son rythme, hors ligne et sans compte.</span></p>
+    <span class="eyebrow"><span data-i="t8">The Lulu series</span></span>
+    <h2 data-words><span data-i="t9">Our games</span></h2>
+    <p><span data-i="t10">Ten worlds are planned. Each one is a complete game you can enjoy at your own pace, offline, with no account needed.</span></p>
   </div>
   <div class="games">
     <a class="game" data-tilt data-r href="lulu-park.html">
@@ -62,8 +67,8 @@
       <div class="info">
         <img class="icon" src="img/park-icon.png" alt="Lulu Park icon">
         <h3>Lulu Park</h3>
-        <p><span lang="en">Build your dream amusement park, from a 1930s village fair all the way to the Moon.</span><span lang="fr">Bâtissez le parc d’attractions de vos rêves, de la fête de village des années 30 jusqu’à la Lune.</span></p>
-        <span class="tag"><span lang="en">Coming soon on the App Store</span><span lang="fr">Bientôt sur l’App Store</span></span>
+        <p><span data-i="t11">Build your dream amusement park, from a 1930s village fair all the way to the Moon.</span></p>
+        <!--store:park--><span class="tag"><span data-i="t12">Coming soon on the App Store</span></span><!--/store:park-->
       </div>
     </a>
     <a class="game" data-tilt data-r href="lulu-museum.html">
@@ -72,46 +77,46 @@
       <div class="info">
         <img class="icon" src="img/museum-icon.png" alt="Lulu Museum icon">
         <h3>Lulu Museum</h3>
-        <p><span lang="en">Reopen an old museum whose exhibits come alive — from mummies to dinosaurs to robots.</span><span lang="fr">Rouvrez un vieux musée dont les pièces prennent vie : momies, dinosaures, pirates et robots.</span></p>
-        <span class="tag"><span lang="en">Coming soon on the App Store</span><span lang="fr">Bientôt sur l’App Store</span></span>
+        <p><span data-i="t13">Reopen an old museum whose exhibits come alive — from mummies to dinosaurs to robots.</span></p>
+        <!--store:museum--><span class="tag"><span data-i="t12">Coming soon on the App Store</span></span><!--/store:museum-->
       </div>
     </a>
     <div class="game soon" data-r>
-      <div><b style="font:600 22px Fredoka,sans-serif;color:var(--ink)">N°3 …</b><br><span lang="en">Lulu is already packing her bags for the next adventure.</span><span lang="fr">Lulu prépare déjà ses valises pour la prochaine aventure.</span></div>
+      <div><b style="font:600 22px Fredoka,sans-serif;color:var(--ink)">N°3 …</b><br><span data-i="t14">Lulu is already packing her bags for the next adventure.</span></div>
     </div>
   </div>
 </div></section>
 
-<div class="marquee" aria-hidden="true"><div><span>The Village Fair</span><span>✦</span><span>The Pier</span><span>✦</span><span>The Grand Park</span><span>✦</span><span>Tropicalia</span><span>✦</span><span>Neon City</span><span>✦</span><span>Lunaria</span><span>✦</span><span>Cabinet of Curiosities</span><span>✦</span><span>Egypt of the Pharaohs</span><span>✦</span><span>Dinosaur Hall</span><span>✦</span><span>Age of Pirates</span><span>✦</span><span>Samurai Japan</span><span>✦</span><span>Museum of the Future</span><span>✦</span><span>The Village Fair</span><span>✦</span><span>The Pier</span><span>✦</span><span>The Grand Park</span><span>✦</span><span>Tropicalia</span><span>✦</span><span>Neon City</span><span>✦</span><span>Lunaria</span><span>✦</span><span>Cabinet of Curiosities</span><span>✦</span><span>Egypt of the Pharaohs</span><span>✦</span><span>Dinosaur Hall</span><span>✦</span><span>Age of Pirates</span><span>✦</span><span>Samurai Japan</span><span>✦</span><span>Museum of the Future</span><span>✦</span></div></div>
+<div class="marquee" aria-hidden="true"><div><span><span data-i="t40">The Village Fair</span></span><span>✦</span><span><span data-i="t41">The Pier</span></span><span>✦</span><span><span data-i="t42">The Grand Park</span></span><span>✦</span><span><span data-i="t43">Tropicalia</span></span><span>✦</span><span><span data-i="t44">Neon City</span></span><span>✦</span><span><span data-i="t45">Lunaria</span></span><span>✦</span><span><span data-i="t58">Cabinet of Curiosities</span></span><span>✦</span><span><span data-i="t59">Egypt of the Pharaohs</span></span><span>✦</span><span><span data-i="t60">Dinosaur Hall</span></span><span>✦</span><span><span data-i="t61">Age of Pirates</span></span><span>✦</span><span><span data-i="t62">Samurai Japan</span></span><span>✦</span><span><span data-i="t63">Museum of the Future</span></span><span>✦</span><span><span data-i="t40">The Village Fair</span></span><span>✦</span><span><span data-i="t41">The Pier</span></span><span>✦</span><span><span data-i="t42">The Grand Park</span></span><span>✦</span><span><span data-i="t43">Tropicalia</span></span><span>✦</span><span><span data-i="t44">Neon City</span></span><span>✦</span><span><span data-i="t45">Lunaria</span></span><span>✦</span><span><span data-i="t58">Cabinet of Curiosities</span></span><span>✦</span><span><span data-i="t59">Egypt of the Pharaohs</span></span><span>✦</span><span><span data-i="t60">Dinosaur Hall</span></span><span>✦</span><span><span data-i="t61">Age of Pirates</span></span><span>✦</span><span><span data-i="t62">Samurai Japan</span></span><span>✦</span><span><span data-i="t63">Museum of the Future</span></span><span>✦</span></div></div>
 
 <section id="studio"><div class="wrap">
   <div class="title">
-    <h2 data-words><span lang="en">Made with care</span><span lang="fr">Faits avec soin</span></h2>
-    <p><span lang="en">Moonbeam Studio is a tiny independent studio. We believe idle games can be beautiful, kind and fair.</span><span lang="fr">Moonbeam Studio est un tout petit studio indépendant. Nous pensons qu’un jeu idle peut être beau, bienveillant et honnête.</span></p>
+    <h2 data-words><span data-i="t15">Made with care</span></h2>
+    <p><span data-i="t16">Moonbeam Studio is a tiny independent studio. We believe idle games can be beautiful, kind and fair.</span></p>
   </div>
   <div class="about">
-    <div data-r><img class="ill" src="img/ill-travel.webp" alt="" loading="lazy" width="120" height="120"><b><span lang="en">One mascot, many worlds</span><span lang="fr">Une mascotte, mille mondes</span></b><p><span lang="en">Lulu and her friends travel from game to game. Players of one game get a little gift in the next.</span><span lang="fr">Lulu et ses amis voyagent de jeu en jeu. Les joueurs d’un jeu reçoivent un petit cadeau dans le suivant.</span></p></div>
-    <div data-r><img class="ill" src="img/ill-relax.webp" alt="" loading="lazy" width="120" height="120"><b><span lang="en">Play your way</span><span lang="fr">À votre rythme</span></b><p><span lang="en">Your world keeps growing while you are away. No timers to babysit, no energy bars, no account.</span><span lang="fr">Votre monde grandit même quand vous êtes absent. Pas de minuteurs à surveiller, pas d’énergie, pas de compte.</span></p></div>
-    <div data-r><img class="ill" src="img/ill-heart.webp" alt="" loading="lazy" width="120" height="120"><b><span lang="en">Fair by design</span><span lang="fr">Honnêtes par principe</span></b><p><span lang="en">Every game can be finished for free. Ads are only shown when you choose to watch one for a reward.</span><span lang="fr">Chaque jeu se termine gratuitement. Les pubs ne s’affichent que si vous choisissez d’en regarder une contre une récompense.</span></p></div>
+    <div data-r><img class="ill" src="img/ill-travel.webp" alt="" loading="lazy" width="120" height="120"><b><span data-i="t17">One mascot, many worlds</span></b><p><span data-i="t18">Lulu and her friends travel from game to game. Players of one game get a little gift in the next.</span></p></div>
+    <div data-r><img class="ill" src="img/ill-relax.webp" alt="" loading="lazy" width="120" height="120"><b><span data-i="t19">Play your way</span></b><p><span data-i="t20">Your world keeps growing while you are away. No timers to babysit, no energy bars, no account.</span></p></div>
+    <div data-r><img class="ill" src="img/ill-heart.webp" alt="" loading="lazy" width="120" height="120"><b><span data-i="t21">Fair by design</span></b><p><span data-i="t22">Every game can be finished for free. Ads are only shown when you choose to watch one for a reward.</span></p></div>
   </div>
 </div></section>
 
 <section id="support"><div class="wrap">
   <div class="help" data-r>
-    <h2 data-words><span lang="en">Support</span><span lang="fr">Aide</span></h2>
-    <p class="sub"><span lang="en">Need help? Write to us and tell us which game — we answer every message.</span><span lang="fr">Besoin d’aide ? Écrivez-nous en précisant le jeu : nous répondons à chaque message.</span></p>
+    <h2 data-words><span data-i="t2">Support</span></h2>
+    <p class="sub"><span data-i="t23">Need help? Write to us and tell us which game — we answer every message.</span></p>
     <a class="mail" href="mailto:moonbeamstudio.contact@gmail.com?subject=Support">✉ moonbeamstudio.contact@gmail.com</a>
-    <details><summary><span lang="en">I bought something but don’t see it.</span><span lang="fr">J’ai acheté quelque chose mais je ne le vois pas.</span></summary><p><span lang="en">Open the Shop and tap <i>Restore purchases</i>. Make sure you are signed in with the same Apple Account.</span><span lang="fr">Ouvrez la Boutique et touchez <i>Restaurer mes achats</i>, avec le même compte Apple.</span></p></details>
-    <details><summary><span lang="en">How do I change language?</span><span lang="fr">Comment changer de langue ?</span></summary><p><span lang="en">Menu (⚙) → Language. The game uses your iPhone language by default.</span><span lang="fr">Menu (⚙) → Langue. Le jeu utilise la langue de votre iPhone par défaut.</span></p></details>
-    <details><summary><span lang="en">How do I change my ad privacy choices?</span><span lang="fr">Comment modifier mes choix de confidentialité ?</span></summary><p><span lang="en">Menu (⚙) → Privacy choices, or iOS Settings → Privacy &amp; Security → Tracking.</span><span lang="fr">Menu (⚙) → Choix de confidentialité, ou Réglages iOS → Confidentialité et sécurité → Suivi.</span></p></details>
-    <details><summary><span lang="en">How do I start over?</span><span lang="fr">Comment recommencer ?</span></summary><p><span lang="en">Menu (⚙) → Reset game. Purchases can be restored afterwards.</span><span lang="fr">Menu (⚙) → Effacer la partie. Les achats peuvent être restaurés ensuite.</span></p></details>
-    <details><summary><span lang="en">Refunds</span><span lang="fr">Remboursements</span></summary><p><span lang="en">Purchases are handled by Apple:</span><span lang="fr">Les achats sont gérés par Apple :</span> <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></p></details>
+    <details><summary><span data-i="t24">I bought something but don’t see it.</span></summary><p><span data-i="t25">Open the Shop and tap <i>Restore purchases</i>. Make sure you are signed in with the same Apple Account.</span></p></details>
+    <details><summary><span data-i="t26">How do I change language?</span></summary><p><span data-i="t27">Menu (⚙) → Language. The game uses your iPhone language by default.</span></p></details>
+    <details><summary><span data-i="t28">How do I change my ad privacy choices?</span></summary><p><span data-i="t29">Menu (⚙) → Privacy choices, or iOS Settings → Privacy &amp; Security → Tracking.</span></p></details>
+    <details><summary><span data-i="t30">How do I start over?</span></summary><p><span data-i="t31">Menu (⚙) → Reset game. Purchases can be restored afterwards.</span></p></details>
+    <details><summary><span data-i="t32">Refunds</span></summary><p><span data-i="t33">Purchases are handled by Apple:</span> <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></p></details>
   </div>
 </div></section>
 </main>
 
 <footer>
-  <a href="lulu-park.html">Lulu Park</a> · <a href="lulu-museum.html">Lulu Museum</a> · <a href="privacy.html"><span lang="en">Privacy Policy</span><span lang="fr">Confidentialité</span></a>
+  <a href="lulu-park.html">Lulu Park</a> · <a href="lulu-museum.html">Lulu Museum</a> · <a href="privacy.html"><span data-i="t34">Privacy Policy</span></a>
   <p>© 2026 Moonbeam Studio</p>
 </footer>
 </body>

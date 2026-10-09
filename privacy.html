@@ -5,29 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · Moonbeam Studio games</title>
 <meta name="description" content="Privacy policy of the games of Moonbeam Studio: Lulu Park: Idle Tycoon and Lulu Museum: Idle Tycoon.">
+<link rel="canonical" href="https://moonbeamstudio.github.io/privacy.html">
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/fredoka-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
+<script src="i18n.js"></script>
 <script src="lang.js"></script>
 <script src="motion.js"></script>
 </head>
 <body>
 <div class="sky"></div><div class="progress"></div><div class="glow"></div>
 <header class="nav"><div class="wrap">
-  <a class="brand" href="./"><img class="logo" src="img/logo.png" alt="" width="34" height="34">Moonbeam Studio</a>
+  <a class="brand" href="./"><img class="logo" src="img/logo-96.png" alt="" width="34" height="34">Moonbeam Studio</a>
   <nav>
-    <a href="./#games" class="hide-s"><span lang="en">Games</span><span lang="fr">Jeux</span></a>
-    <a href="./#studio" class="hide-s"><span lang="en">Studio</span><span lang="fr">Le studio</span></a>
-    <a href="./#support"><span lang="en">Support</span><span lang="fr">Aide</span></a>
-    <button class="lang" aria-label="Language"><span lang="en">FR</span><span lang="fr">EN</span></button>
+    <a href="./#games" class="hide-s"><span data-i="t0">Games</span></a>
+    <a href="./#studio" class="hide-s"><span data-i="t1">Studio</span></a>
+    <a href="./#support"><span data-i="t2">Support</span></a>
+    <label class="lang"><span class="sr">Language</span><select aria-label="Language">
+      <option value="en">EN</option><option value="fr">FR</option><option value="es">ES</option><option value="pt">PT</option><option value="de">DE</option><option value="it">IT</option><option value="ja">日本</option>
+    </select></label>
   </nav>
 </div></header>
 <main class="wrap"><article class="legal">
-<h1>Moonbeam Studio games — Privacy Policy</h1>
-<p class="muted">Moonbeam Studio · Effective date: October 6, 2026</p>
-<nav class="toc"><a href="#en">English</a><a href="#fr">Français</a></nav>
+<h1><span data-i="t75">Moonbeam Studio games — Privacy Policy</span></h1>
+<p class="muted"><span data-i="t76">Moonbeam Studio · Effective date: October 6, 2026</span></p>
+<p class="muted" data-i="t74"></p>
+<nav class="toc"><a href="#en" onclick="setLang('en')">English</a><a href="#fr" onclick="setLang('fr')">Français</a></nav>
 
 <section id="en">
 <h2>1. Who we are</h2>

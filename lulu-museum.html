@@ -10,23 +10,28 @@
 <meta property="og:image" content="https://moonbeamstudio.github.io/img/og-museum.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://moonbeamstudio.github.io/lulu-museum.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Lulu Museum: Idle Tycoon", "description": "Reopen an old museum whose exhibits come alive, with Lulu the puppy.", "image": "https://moonbeamstudio.github.io/img/museum-hero.webp", "gamePlatform": "iPhone", "applicationCategory": "GameApplication", "operatingSystem": "iOS", "genre": ["Simulation", "Casual"], "inLanguage": ["en", "fr", "es", "pt", "de", "it", "ja"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Moonbeam Studio", "url": "https://moonbeamstudio.github.io/"}}</script>
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/fredoka-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
+<script src="i18n.js"></script>
 <script src="lang.js"></script>
 <script src="motion.js"></script>
 </head>
 <body class="t-museum">
 <div class="sky"></div><div class="progress"></div><div class="glow"></div>
 <header class="nav"><div class="wrap">
-  <a class="brand" href="./"><img class="logo" src="img/logo.png" alt="" width="34" height="34">Moonbeam Studio</a>
+  <a class="brand" href="./"><img class="logo" src="img/logo-96.png" alt="" width="34" height="34">Moonbeam Studio</a>
   <nav>
-    <a href="./#games" class="hide-s"><span lang="en">Games</span><span lang="fr">Jeux</span></a>
-    <a href="./#studio" class="hide-s"><span lang="en">Studio</span><span lang="fr">Le studio</span></a>
-    <a href="./#support"><span lang="en">Support</span><span lang="fr">Aide</span></a>
-    <button class="lang" aria-label="Language"><span lang="en">FR</span><span lang="fr">EN</span></button>
+    <a href="./#games" class="hide-s"><span data-i="t0">Games</span></a>
+    <a href="./#studio" class="hide-s"><span data-i="t1">Studio</span></a>
+    <a href="./#support"><span data-i="t2">Support</span></a>
+    <label class="lang"><span class="sr">Language</span><select aria-label="Language">
+      <option value="en">EN</option><option value="fr">FR</option><option value="es">ES</option><option value="pt">PT</option><option value="de">DE</option><option value="it">IT</option><option value="ja">日本</option>
+    </select></label>
   </nav>
 </div></header>
 <main>
@@ -36,49 +41,49 @@
     <div class="posterbox" aria-hidden="true"><div class="ring"><span class="sat" style="--a:-90deg"><img src="img/s/museum-lulu-1.webp" alt=""></span><span class="sat" style="--a:-30deg"><img src="img/s/museum-lulu-2.webp" alt=""></span><span class="sat" style="--a:30deg"><img src="img/s/museum-lulu-3.webp" alt=""></span><span class="sat" style="--a:90deg"><img src="img/s/museum-lulu-4.webp" alt=""></span><span class="sat" style="--a:150deg"><img src="img/s/museum-lulu-5.webp" alt=""></span><span class="sat" style="--a:210deg"><img src="img/s/museum-lulu-6.webp" alt=""></span></div><img class="poster" data-tilt src="img/museum-hero.webp" alt=""></div>
     <img class="icon" data-r src="img/museum-icon.png" alt="Lulu Museum icon">
     <div>
-      <span class="eyebrow" data-r><span lang="en">Moonbeam Studio · Lulu series n°2</span><span lang="fr">Moonbeam Studio · Série Lulu n°2</span></span>
+      <span class="eyebrow" data-r><span data-i="t55">Moonbeam Studio · Lulu series n°2</span></span>
       <h1 data-words>Lulu Museum</h1>
-      <p data-r><span lang="en">Reopen an old museum whose exhibits come alive: mummies wave, dinosaurs roar and robots serve tea.</span><span lang="fr">Rouvrez un vieux musée dont les pièces prennent vie : les momies saluent, les dinosaures rugissent et les robots servent le thé.</span></p>
-      <span class="store" data-r><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.61-2.66 1.37-.58.67-1.1 1.76-.96 2.8 1.01.08 2.05-.52 2.68-1.28z"/></svg><span><small><span lang="en">Coming soon on the</span><span lang="fr">Bientôt sur l’</span></small><b>App Store</b></span></span>
+      <p data-r><span data-i="t56">Reopen an old museum whose exhibits come alive: mummies wave, dinosaurs roar and robots serve tea.</span></p>
+      <!--store:museum--><span class="store" data-r><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.61-2.66 1.37-.58.67-1.1 1.76-.96 2.8 1.01.08 2.05-.52 2.68-1.28z"/></svg><span><small><span data-i="t37">Coming soon on the</span></small><b>App Store</b></span></span><!--/store:museum-->
     </div>
   </div>
 </div>
 
 <section class="rail"><div class="sticky"><div class="title wrap">
-  <h2 data-words><span lang="en">Six wings to restore</span><span lang="fr">Six ailes à restaurer</span></h2>
-  <p><span lang="en">Explore each world.</span><span lang="fr">Découvrez chaque monde.</span></p>
+  <h2 data-words><span data-i="t57">Six wings to restore</span></h2>
+  <p><span data-i="t39">Explore each world.</span></p>
 <div class="meter"><i></i></div></div>
   <div class="shots">
-    <figure data-tint="#7a5a3a"><div class="phone" data-tilt><img src="img/museum-1.webp" alt="The Cabinet of Curiosities" loading="lazy"></div><figcaption><img class="mini" src="img/s/museum-lulu-1.webp" alt=""><span lang="en">The Cabinet of Curiosities</span><span lang="fr">Le cabinet de curiosités</span></figcaption></figure>
-    <figure data-tint="#c9953f"><div class="phone" data-tilt><img src="img/museum-2.webp" alt="Egypt of the Pharaohs" loading="lazy"></div><figcaption><img class="mini" src="img/s/museum-lulu-2.webp" alt=""><span lang="en">Egypt of the Pharaohs</span><span lang="fr">L’Égypte des pharaons</span></figcaption></figure>
-    <figure data-tint="#4f8a3a"><div class="phone" data-tilt><img src="img/museum-3.webp" alt="The Dinosaur Hall" loading="lazy"></div><figcaption><img class="mini" src="img/s/museum-lulu-3.webp" alt=""><span lang="en">The Dinosaur Hall</span><span lang="fr">La salle des dinosaures</span></figcaption></figure>
-    <figure data-tint="#2e7fa0"><div class="phone" data-tilt><img src="img/museum-4.webp" alt="The Age of Pirates" loading="lazy"></div><figcaption><img class="mini" src="img/s/museum-lulu-4.webp" alt=""><span lang="en">The Age of Pirates</span><span lang="fr">L’âge des pirates</span></figcaption></figure>
-    <figure data-tint="#b03a3a"><div class="phone" data-tilt><img src="img/museum-5.webp" alt="Samurai Japan" loading="lazy"></div><figcaption><img class="mini" src="img/s/museum-lulu-5.webp" alt=""><span lang="en">Samurai Japan</span><span lang="fr">Le Japon des samouraïs</span></figcaption></figure>
-    <figure data-tint="#6fa8d8"><div class="phone" data-tilt><img src="img/museum-6.webp" alt="The Museum of the Future" loading="lazy"></div><figcaption><img class="mini" src="img/s/museum-lulu-6.webp" alt=""><span lang="en">The Museum of the Future</span><span lang="fr">Le musée du futur</span></figcaption></figure>
+    <figure data-tint="#7a5a3a"><div class="phone" data-tilt><video muted loop playsinline preload="none" poster="img/museum-1.webp" data-src="vid/museum-1.mp4" aria-label="The Cabinet of Curiosities"></video></div><figcaption><img class="mini" src="img/s/museum-lulu-1.webp" alt=""><span data-i="t58">The Cabinet of Curiosities</span></figcaption></figure>
+    <figure data-tint="#c9953f"><div class="phone" data-tilt><video muted loop playsinline preload="none" poster="img/museum-2.webp" data-src="vid/museum-2.mp4" aria-label="Egypt of the Pharaohs"></video></div><figcaption><img class="mini" src="img/s/museum-lulu-2.webp" alt=""><span data-i="t59">Egypt of the Pharaohs</span></figcaption></figure>
+    <figure data-tint="#4f8a3a"><div class="phone" data-tilt><video muted loop playsinline preload="none" poster="img/museum-3.webp" data-src="vid/museum-3.mp4" aria-label="The Dinosaur Hall"></video></div><figcaption><img class="mini" src="img/s/museum-lulu-3.webp" alt=""><span data-i="t60">The Dinosaur Hall</span></figcaption></figure>
+    <figure data-tint="#2e7fa0"><div class="phone" data-tilt><video muted loop playsinline preload="none" poster="img/museum-4.webp" data-src="vid/museum-4.mp4" aria-label="The Age of Pirates"></video></div><figcaption><img class="mini" src="img/s/museum-lulu-4.webp" alt=""><span data-i="t61">The Age of Pirates</span></figcaption></figure>
+    <figure data-tint="#b03a3a"><div class="phone" data-tilt><video muted loop playsinline preload="none" poster="img/museum-5.webp" data-src="vid/museum-5.mp4" aria-label="Samurai Japan"></video></div><figcaption><img class="mini" src="img/s/museum-lulu-5.webp" alt=""><span data-i="t62">Samurai Japan</span></figcaption></figure>
+    <figure data-tint="#6fa8d8"><div class="phone" data-tilt><video muted loop playsinline preload="none" poster="img/museum-6.webp" data-src="vid/museum-6.mp4" aria-label="The Museum of the Future"></video></div><figcaption><img class="mini" src="img/s/museum-lulu-6.webp" alt=""><span data-i="t63">The Museum of the Future</span></figcaption></figure>
   </div>
 </div></section>
-<div class="marquee" aria-hidden="true"><div><span><span lang="en">The Cabinet of Curiosities</span><span lang="fr">Le cabinet de curiosités</span></span><span>✦</span><span><span lang="en">Egypt of the Pharaohs</span><span lang="fr">L’Égypte des pharaons</span></span><span>✦</span><span><span lang="en">The Dinosaur Hall</span><span lang="fr">La salle des dinosaures</span></span><span>✦</span><span><span lang="en">The Age of Pirates</span><span lang="fr">L’âge des pirates</span></span><span>✦</span><span><span lang="en">Samurai Japan</span><span lang="fr">Le Japon des samouraïs</span></span><span>✦</span><span><span lang="en">The Museum of the Future</span><span lang="fr">Le musée du futur</span></span><span>✦</span><span><span lang="en">The Cabinet of Curiosities</span><span lang="fr">Le cabinet de curiosités</span></span><span>✦</span><span><span lang="en">Egypt of the Pharaohs</span><span lang="fr">L’Égypte des pharaons</span></span><span>✦</span><span><span lang="en">The Dinosaur Hall</span><span lang="fr">La salle des dinosaures</span></span><span>✦</span><span><span lang="en">The Age of Pirates</span><span lang="fr">L’âge des pirates</span></span><span>✦</span><span><span lang="en">Samurai Japan</span><span lang="fr">Le Japon des samouraïs</span></span><span>✦</span><span><span lang="en">The Museum of the Future</span><span lang="fr">Le musée du futur</span></span><span>✦</span></div></div>
+<div class="marquee" aria-hidden="true"><div><span><span data-i="t58">The Cabinet of Curiosities</span></span><span>✦</span><span><span data-i="t59">Egypt of the Pharaohs</span></span><span>✦</span><span><span data-i="t60">The Dinosaur Hall</span></span><span>✦</span><span><span data-i="t61">The Age of Pirates</span></span><span>✦</span><span><span data-i="t62">Samurai Japan</span></span><span>✦</span><span><span data-i="t63">The Museum of the Future</span></span><span>✦</span><span><span data-i="t58">The Cabinet of Curiosities</span></span><span>✦</span><span><span data-i="t59">Egypt of the Pharaohs</span></span><span>✦</span><span><span data-i="t60">The Dinosaur Hall</span></span><span>✦</span><span><span data-i="t61">The Age of Pirates</span></span><span>✦</span><span><span data-i="t62">Samurai Japan</span></span><span>✦</span><span><span data-i="t63">The Museum of the Future</span></span><span>✦</span></div></div>
 
 <section><div class="wrap">
-  <div class="title"><h2 data-words><span lang="en">Why you’ll love it</span><span lang="fr">Pourquoi vous allez l’adorer</span></h2></div>
+  <div class="title"><h2 data-words><span data-i="t46">Why you’ll love it</span></h2></div>
   <div class="feats">
-    <div data-r data-tilt><img class="ill" src="img/s/museum-f1.webp" alt="" loading="lazy"><b><span lang="en"><span data-count="36">36</span> living exhibits</span><span lang="fr"><span data-count="36">36</span> pièces vivantes</span></b><p><span lang="en">Tap an exhibit and watch it put on a show for the crowd gathered around it.</span><span lang="fr">Touchez une pièce et regardez-la donner son numéro devant la foule rassemblée.</span></p></div>
-    <div data-r data-tilt><img class="ill" src="img/s/museum-f2.webp" alt="" loading="lazy"><b><span lang="en"><span data-count="108">108</span> rare pieces</span><span lang="fr"><span data-count="108">108</span> pièces rares</span></b><p><span lang="en">Restore every exhibit, find the rare pieces and complete your collection album.</span><span lang="fr">Restaurez chaque pièce, trouvez les objets rares et complétez votre album de collection.</span></p></div>
-    <div data-r data-tilt><img class="ill" src="img/s/museum-f3.webp" alt="" loading="lazy"><b><span lang="en">A museum full of life</span><span lang="fr">Un musée plein de vie</span></b><p><span lang="en">Visitors arrive from the street, school groups visit, and Lulu explores every room.</span><span lang="fr">Les visiteurs arrivent de la rue, les groupes scolaires défilent et Lulu explore chaque salle.</span></p></div>
+    <div data-r data-tilt><img class="ill" src="img/s/museum-f1.webp" alt="" loading="lazy"><b><span data-count="36">36</span> <span data-i="t64">living exhibits</span></b><p><span data-i="t65">Tap an exhibit and watch it put on a show for the crowd gathered around it.</span></p></div>
+    <div data-r data-tilt><img class="ill" src="img/s/museum-f2.webp" alt="" loading="lazy"><b><span data-count="108">108</span> <span data-i="t66">rare pieces</span></b><p><span data-i="t67">Restore every exhibit, find the rare pieces and complete your collection album.</span></p></div>
+    <div data-r data-tilt><img class="ill" src="img/s/museum-f3.webp" alt="" loading="lazy"><b><span data-i="t68">A museum full of life</span></b><p><span data-i="t69">Visitors arrive from the street, school groups visit, and Lulu explores every room.</span></p></div>
   </div>
 </div></section>
 
 <section><div class="wrap" style="text-align:center">
   <div class="btns" style="justify-content:center">
-    <a class="btn gold" href="./#support"><span lang="en">Need help?</span><span lang="fr">Besoin d’aide ?</span></a>
-    <a class="btn ghost" href="privacy.html"><span lang="en">Privacy Policy</span><span lang="fr">Confidentialité</span></a>
-    <a class="btn ghost" href="lulu-park.html"><span lang="en">Also discover Lulu Park</span><span lang="fr">Découvrez aussi Lulu Park</span> →</a>
+    <a class="btn gold" href="./#support"><span data-i="t53">Need help?</span></a>
+    <a class="btn ghost" href="privacy.html"><span data-i="t34">Privacy Policy</span></a>
+    <a class="btn ghost" href="lulu-park.html"><span data-i="t70">Also discover Lulu Park</span> →</a>
   </div>
 </div></section>
 </main>
 
 <footer>
-  <a href="./">Moonbeam Studio</a> · <a href="lulu-park.html">Lulu Park</a> · <a href="lulu-museum.html">Lulu Museum</a> · <a href="privacy.html"><span lang="en">Privacy Policy</span><span lang="fr">Confidentialité</span></a>
+  <a href="./">Moonbeam Studio</a> · <a href="lulu-park.html">Lulu Park</a> · <a href="lulu-museum.html">Lulu Museum</a> · <a href="privacy.html"><span data-i="t34">Privacy Policy</span></a>
   <p>© 2026 Moonbeam Studio</p>
 </footer>
 </body>

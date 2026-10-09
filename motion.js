@@ -49,6 +49,17 @@
       });
     }
 
+    // vidéos des iPhone : seule celle de l'époque au centre joue (chargée à la demande)
+    function play(fig, on) {
+      var v = fig.querySelector('video'); if (!v) return;
+      if (on && !still) { if (!v.src) v.src = v.dataset.src; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      else if (!v.paused) v.pause();
+    }
+    if (still) $$('video[autoplay]').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
+    // vidéos sans défilement piloté (rail inactif) : jouer quand elles sont à l'écran
+    var vio = new IntersectionObserver(function (es) { es.forEach(function (e) { var f = e.target.closest('figure'); if (f && !f.closest('.rail.on')) play(f, e.isIntersecting); }); }, { threshold: 0.6 });
+    $$('.shots video').forEach(function (v) { vio.observe(v); });
+
     // barre de progression, défilement des captures, parallaxe tactile : une seule mise à jour par image
     var bar = document.querySelector('.progress'), stage0 = document.querySelector('.stage, .posterbox'), rails = [], ticking = false;
     function update() {
@@ -64,7 +75,7 @@
         o.rail.style.setProperty('--q', q.toFixed(3));
         // l'époque au centre de l'écran donne sa couleur au fond et se met en avant
         var k = Math.round(q * (o.figs.length - 1));
-        if (k !== o.k) { o.k = k; o.rail.style.setProperty('--tint', o.figs[k].dataset.tint || 'transparent'); o.figs.forEach(function (f, j) { f.classList.toggle('cur', j === k); }); }
+        if (k !== o.k) { o.k = k; o.rail.style.setProperty('--tint', o.figs[k].dataset.tint || 'transparent'); o.figs.forEach(function (f, j) { f.classList.toggle('cur', j === k); play(f, j === k); }); }
       });
     }
     function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }

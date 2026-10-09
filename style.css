@@ -17,8 +17,8 @@ a { color: var(--gold); }
 img { display: block; max-width: 100%; }
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
 
-/* bilingue : <span lang="en">…</span><span lang="fr">…</span> */
-html[data-l="en"] [lang="fr"], html[data-l="fr"] [lang="en"] { display: none !important; }
+/* textes traduits par lang.js (data-i) ; texte réservé aux lecteurs d'écran */
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* ciel étoilé */
 .sky { position: fixed; inset: 0; z-index: -1; pointer-events: none;
@@ -51,7 +51,9 @@ html[data-l="en"] [lang="fr"], html[data-l="fr"] [lang="en"] { display: none !im
 .nav nav { margin-left: auto; display: flex; gap: 18px; align-items: center; }
 .nav nav a { color: var(--muted); text-decoration: none; font-weight: 700; font-size: 15px; }
 .nav nav a:hover { color: var(--ink); }
-.lang { border: 1px solid var(--line); background: none; color: var(--ink); border-radius: 999px; padding: 4px 12px; font: 700 13px "Nunito", sans-serif; cursor: pointer; }
+.lang select { appearance: none; -webkit-appearance: none; border: 1px solid var(--line); background: rgba(255,255,255,.06) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23fff8ec' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 12px center;
+  color: var(--ink); border-radius: 999px; min-height: 40px; padding: 0 30px 0 14px; font: 800 14px "Nunito", sans-serif; cursor: pointer; }
+.lang select option { color: #2b1d3a; }
 @media (max-width: 640px) { .nav nav a.hide-s { display: none; } }
 
 /* héros du studio */
@@ -69,7 +71,7 @@ html[data-l="en"] [lang="fr"], html[data-l="fr"] [lang="en"] { display: none !im
 /* téléphones (maquettes) */
 .phone { position: relative; width: 240px; aspect-ratio: 1320/2868; border-radius: 40px; padding: 9px;
   background: linear-gradient(145deg, #4a4566, #19162e); box-shadow: 0 30px 80px rgba(0,0,0,.55), inset 0 0 0 1.5px rgba(255,255,255,.18); }
-.phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 32px; }
+.phone img, .phone video { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 32px; background: #111; }
 .phone::after { content: ""; position: absolute; top: 18px; left: 50%; width: 30%; height: 20px; transform: translateX(-50%); background: #000; border-radius: 999px; }
 .stage { position: relative; height: 560px; }
 .stage .phone { position: absolute; }
@@ -82,7 +84,7 @@ html[data-l="en"] [lang="fr"], html[data-l="fr"] [lang="en"] { display: none !im
   .hero { grid-template-columns: 1fr; padding-top: 40px; text-align: center; }
   .hero p.lead { margin-inline: auto; } .btns { justify-content: center; }
   .stage { height: 440px; max-width: 420px; margin: 0 auto; width: 100%; }
-  .phone { width: 180px; border-radius: 30px; padding: 7px; } .phone img { border-radius: 24px; }
+  .phone { width: 180px; border-radius: 30px; padding: 7px; } .phone img, .phone video { border-radius: 24px; }
   .moon { width: 120px; height: 120px; left: 35%; }
 }
 
@@ -332,3 +334,24 @@ figcaption .mini { width: 40px; height: 40px; object-fit: contain; transition: t
 .feats .ill { width: 110px; height: 110px; object-fit: contain; margin: -6px 0 2px; filter: drop-shadow(0 10px 16px rgba(0,0,0,.4)); transition: transform .5s cubic-bezier(.3,1.6,.5,1); }
 .feats div:hover .ill { transform: translateY(-8px) rotate(-6deg) scale(1.08); }
 .feats [data-tilt] { transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); }
+
+/* ===== corrections de l'audit ===== */
+/* rien ne dépasse sur les côtés (iPhone de droite, orbites), quel que soit l'écran */
+main { overflow-x: clip; }
+@media (max-width: 1200px) { .orbit { width: 440px; height: 440px; margin: -220px 0 0 -220px; } .orbit.o2 { width: 320px; height: 320px; margin: -160px 0 0 -160px; } }
+/* zones à toucher d'au moins 44 px */
+.nav nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; }
+.help summary { display: flex; align-items: center; gap: 8px; min-height: 44px; list-style-position: inside; }
+.help details { padding: 4px 0; }
+footer a { display: inline-block; padding: 10px 4px; }
+/* focus visible au clavier */
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 10px; }
+.help :focus-visible, .legal :focus-visible { outline-color: #b8322a; }
+/* confidentialité : la section dans la langue du site (français si FR, anglais sinon) */
+html[data-l="fr"] .legal #en, html:not([data-l="fr"]) .legal #fr { display: none; }
+.legal p[data-i]:empty { display: none; }
+/* japonais : polices du système pour les caractères absents de Fredoka/Nunito */
+html[lang="ja"] body, html[lang="ja"] h1, html[lang="ja"] h2, html[lang="ja"] h3 { font-family: "Fredoka", "Nunito", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif; }
+a.store:hover { transform: translateY(-2px); } .store { transition: transform .2s; }
+.brand { min-height: 44px; }
+.legal .toc a { padding: 11px 18px; }

@@ -1,0 +1,22 @@
+# Chaque jour : met les badges App Store dès qu'un jeu Moonbeam Studio est publié
+name: store-badges
+on:
+  schedule: [{ cron: '17 7 * * *' }]
+  workflow_dispatch:
+permissions: { contents: write, pages: write }
+jobs:
+  badges:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: node .github/store-badges.mjs
+      - name: Publier si changement
+        run: |
+          git diff --quiet && exit 0
+          git config user.name "Moonbeam Studio"
+          git config user.email "moonbeamstudio.contact@gmail.com"
+          git add -A && git commit -m "App Store badges" && git push
+          gh api -X POST repos/${{ github.repository }}/pages/builds || true
+        env: { GH_TOKEN: '${{ github.token }}' }
