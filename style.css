@@ -10,7 +10,6 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0; background: var(--night); color: var(--ink);
   font: 17px/1.65 "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  overflow-x: hidden;
 }
 h1, h2, h3, .brand { font-family: "Fredoka", "Nunito", sans-serif; font-weight: 600; line-height: 1.1; margin: 0; }
 a { color: var(--gold); }
@@ -57,7 +56,7 @@ img { display: block; max-width: 100%; }
 @media (max-width: 640px) { .nav nav a.hide-s { display: none; } }
 
 /* héros du studio */
-.hero { padding: 72px 0 40px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; }
+.hero { padding: 72px 20px 40px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; }
 .eyebrow { display: inline-block; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: 13px; color: var(--gold); margin-bottom: 14px; }
 .hero h1 { font-size: clamp(40px, 5.6vw, 62px); }
 .hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--gold), var(--gold2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -187,7 +186,7 @@ footer a { color: var(--muted); margin: 0 10px; }
   background: linear-gradient(90deg, var(--gold), var(--gold2)); box-shadow: 0 0 12px var(--gold2); }
 .glow { position: fixed; left: 0; top: 0; width: 600px; height: 600px; border-radius: 50%; pointer-events: none; z-index: 0;
   background: radial-gradient(circle, rgba(255,200,120,.10), transparent 60%); transition: transform .2s ease-out; transform: translate(-999px,-999px); }
-main, footer, .nav { position: relative; z-index: 1; }
+main, footer { position: relative; z-index: 1; }
 .nav { z-index: 10; }
 
 /* étoiles filantes */
@@ -359,3 +358,43 @@ html[lang="ja"] body, html[lang="ja"] h1, html[lang="ja"] h2, html[lang="ja"] h3
 a.store:hover { transform: translateY(-2px); } .store { transition: transform .2s; }
 .brand { min-height: 44px; }
 .legal .toc a { padding: 11px 18px; }
+
+/* ===== iPhone (relevé au simulateur iPhone 17 Pro) ===== */
+/* Safari iOS : « overflow-x: hidden » sur body casse la barre du haut collante ; « clip » coupe sans créer de zone de défilement */
+body { overflow-x: clip; }
+.brand { white-space: nowrap; }
+.mail { max-width: 100%; overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .brand { font-size: 19px; gap: 8px; }
+  .nav nav { gap: 10px; }
+  .hero { padding-top: 28px; gap: 10px; }
+  .hero p.lead { font-size: 17px; }
+  /* accueil : les deux iPhone tiennent dans l'écran, Lulu au-dessus */
+  .stage { height: 440px; max-width: 360px; }
+  .stage .phone { width: 150px; border-radius: 26px; padding: 6px; }
+  .stage .phone img, .stage .phone video { border-radius: 21px; }
+  .stage .p1 { left: 6%; top: 150px; } .stage .p2 { right: 6%; top: 120px; }
+  .lulu { width: 200px; margin-left: -100px; top: -6px; }
+  .orbit { width: 300px; height: 300px; margin: -150px 0 0 -150px; }
+  .mail { font-size: 15px; padding: 12px 18px; }
+  .help { padding: 32px 20px; }
+  .game .info { padding: 22px; }
+  .game h3 { font-size: 26px; }
+  /* pages des jeux : le texte d'abord, l'affiche plus petite en dessous */
+  .ghero { padding: 24px 0 20px; }
+  .ghero .wrap { gap: 16px; }
+  .posterbox { grid-row: 3; max-width: 230px; }
+  .ghero .icon { margin-top: 0; width: 84px; height: 84px; border-radius: 20px; }
+  .ghero p { font-size: 17px; }
+  /* carrousel des époques : iPhone centré, assez petit pour laisser la place au titre et au nom sous la barre de Safari */
+  .rail.on .sticky { height: 100svh; padding-bottom: 70px; }
+  .rail.on .shots { gap: 28px; padding: 6px calc(50vw - 95px) 20px; }
+  .rail.on .shots .phone { width: 190px; }
+  .rail .title h2 { font-size: 28px; }
+  .rail .shots figure:nth-child(even) { translate: 0 12px; }
+}
+.nav { position: sticky; top: 0; z-index: 10; }
+.hero > *, .ghero .wrap > * { min-width: 0; }
+.mail { display: inline-flex; align-items: center; gap: 8px; }
+.rail.on .sticky { padding-top: 64px; }
+@media (max-width: 600px) { .rail.on .sticky { justify-content: flex-start; padding-top: 84px; } }
