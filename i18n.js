@@ -38,7 +38,7 @@ window.I18N = {
 "t34": "Confidentialité",
 "t35": "Moonbeam Studio · Série Lulu n°1",
 "t36": "Bâtissez le parc d’attractions de vos rêves avec Lulu, de la fête de village des années 30 jusqu’à la Lune.",
-"t37": "Bientôt sur l’",
+"t37": "Bientôt sur",
 "t38": "Six parcs, six époques",
 "t39": "Découvrez chaque monde.",
 "t40": "La fête du village",
@@ -79,7 +79,8 @@ window.I18N = {
 "t75": "Jeux Moonbeam Studio — Politique de confidentialité",
 "t76": "Moonbeam Studio · En vigueur le 6 octobre 2026",
 "t77": "Disponible sur l’App Store",
-"t78": "Télécharger dans l’"
+"t78": "Télécharger dans",
+"t79": "l’App Store"
 },
 "es": {
 "t0": "Juegos",
@@ -160,7 +161,8 @@ window.I18N = {
 "t75": "Juegos de Moonbeam Studio — Política de privacidad",
 "t76": "Moonbeam Studio · Vigente desde el 6 de octubre de 2026",
 "t77": "Disponible en el App Store",
-"t78": "Descárgalo en el"
+"t78": "Descárgalo en el",
+"t79": "App Store"
 },
 "pt": {
 "t0": "Jogos",
@@ -241,7 +243,8 @@ window.I18N = {
 "t75": "Jogos da Moonbeam Studio — Política de Privacidade",
 "t76": "Moonbeam Studio · Em vigor desde 6 de outubro de 2026",
 "t77": "Disponível na App Store",
-"t78": "Baixar na"
+"t78": "Baixar na",
+"t79": "App Store"
 },
 "de": {
 "t0": "Spiele",
@@ -322,7 +325,8 @@ window.I18N = {
 "t75": "Spiele von Moonbeam Studio — Datenschutzerklärung",
 "t76": "Moonbeam Studio · Gültig ab 6. Oktober 2026",
 "t77": "Jetzt im App Store",
-"t78": "Laden im"
+"t78": "Laden im",
+"t79": "App Store"
 },
 "it": {
 "t0": "Giochi",
@@ -403,7 +407,8 @@ window.I18N = {
 "t75": "Giochi di Moonbeam Studio — Informativa sulla privacy",
 "t76": "Moonbeam Studio · In vigore dal 6 ottobre 2026",
 "t77": "Disponibile su App Store",
-"t78": "Scarica su"
+"t78": "Scarica su",
+"t79": "App Store"
 },
 "ja": {
 "t0": "ゲーム",
@@ -484,7 +489,8 @@ window.I18N = {
 "t75": "Moonbeam Studio のゲーム — プライバシーポリシー",
 "t76": "Moonbeam Studio · 2026年10月6日施行",
 "t77": "App Storeで配信中",
-"t78": "ダウンロード"
+"t78": "ダウンロード",
+"t79": "App Store"
 }
 };
-window.I18N_EN = {"t0": "Games", "t1": "Studio", "t2": "Support", "t3": "Independent game studio", "t4": "Cozy little worlds, <em>built one tap at a time.</em>", "t5": "We make relaxing idle tycoon games for iPhone, starring Lulu — a curious puppy who turns every place she visits into something magical.", "t6": "Discover our games", "t7": "Get help", "t8": "The Lulu series", "t9": "Our games", "t10": "Ten worlds are planned. Each one is a complete game you can enjoy at your own pace, offline, with no account needed.", "t11": "Build your dream amusement park, from a 1930s village fair all the way to the Moon.", "t12": "Coming soon on the App Store", "t13": "Reopen an old museum whose exhibits come alive — from mummies to dinosaurs to robots.", "t14": "Lulu is already packing her bags for the next adventure.", "t15": "Made with care", "t16": "Moonbeam Studio is a tiny independent studio. We believe idle games can be beautiful, kind and fair.", "t17": "One mascot, many worlds", "t18": "Lulu and her friends travel from game to game. Players of one game get a little gift in the next.", "t19": "Play your way", "t20": "Your world keeps growing while you are away. No timers to babysit, no energy bars, no account.", "t21": "Fair by design", "t22": "Every game can be finished for free. Ads are only shown when you choose to watch one for a reward.", "t23": "Need help? Write to us and tell us which game — we answer every message.", "t24": "I bought something but don’t see it.", "t25": "Open the Shop and tap <i>Restore purchases</i>. Make sure you are signed in with the same Apple Account.", "t26": "How do I change language?", "t27": "Menu (⚙) → Language. The game uses your iPhone language by default.", "t28": "How do I change my ad privacy choices?", "t29": "Menu (⚙) → Privacy choices, or iOS Settings → Privacy &amp; Security → Tracking.", "t30": "How do I start over?", "t31": "Menu (⚙) → Reset game. Purchases can be restored afterwards.", "t32": "Refunds", "t33": "Purchases are handled by Apple:", "t34": "Privacy Policy", "t35": "Moonbeam Studio · Lulu series n°1", "t36": "Build your dream amusement park with Lulu, from a 1930s village fair all the way to the Moon.", "t37": "Coming soon on the", "t38": "Six parks, six eras", "t39": "Explore each world.", "t40": "The Village Fair", "t41": "The Pier", "t42": "The Grand Park", "t43": "Tropicalia", "t44": "Neon City", "t45": "Lunaria", "t46": "Why you’ll love it", "t47": "Rides that come alive", "t48": "Carousels, Ferris wheels and roller coasters spin, light up and fill with happy visitors.", "t49": "Grow while you rest", "t50": "Your park keeps earning while you are away. Come back to a pile of coins.", "t51": "Special nights", "t52": "Fireworks, quests and talents keep every session full of little surprises.", "t53": "Need help?", "t54": "Also discover Lulu Museum", "t55": "Moonbeam Studio · Lulu series n°2", "t56": "Reopen an old museum whose exhibits come alive: mummies wave, dinosaurs roar and robots serve tea.", "t57": "Six wings to restore", "t58": "The Cabinet of Curiosities", "t59": "Egypt of the Pharaohs", "t60": "The Dinosaur Hall", "t61": "The Age of Pirates", "t62": "Samurai Japan", "t63": "The Museum of the Future", "t64": "living exhibits", "t65": "Tap an exhibit and watch it put on a show for the crowd gathered around it.", "t66": "rare pieces", "t67": "Restore every exhibit, find the rare pieces and complete your collection album.", "t68": "A museum full of life", "t69": "Visitors arrive from the street, school groups visit, and Lulu explores every room.", "t70": "Also discover Lulu Park", "t71": "Page not found", "t72": "Lulu looked everywhere, even on the Moon, but this page doesn’t exist.", "t73": "Back to the studio", "t74": ""};
+window.I18N_EN = {"t0": "Games", "t1": "Studio", "t2": "Support", "t3": "Independent game studio", "t4": "Cozy little worlds, <em>built one tap at a time.</em>", "t5": "We make relaxing idle tycoon games for iPhone, starring Lulu — a curious puppy who turns every place she visits into something magical.", "t6": "Discover our games", "t7": "Get help", "t8": "The Lulu series", "t9": "Our games", "t10": "Ten worlds are planned. Each one is a complete game you can enjoy at your own pace, offline, with no account needed.", "t11": "Build your dream amusement park, from a 1930s village fair all the way to the Moon.", "t12": "Coming soon on the App Store", "t13": "Reopen an old museum whose exhibits come alive — from mummies to dinosaurs to robots.", "t14": "Lulu is already packing her bags for the next adventure.", "t15": "Made with care", "t16": "Moonbeam Studio is a tiny independent studio. We believe idle games can be beautiful, kind and fair.", "t17": "One mascot, many worlds", "t18": "Lulu and her friends travel from game to game. Players of one game get a little gift in the next.", "t19": "Play your way", "t20": "Your world keeps growing while you are away. No timers to babysit, no energy bars, no account.", "t21": "Fair by design", "t22": "Every game can be finished for free. Ads are only shown when you choose to watch one for a reward.", "t23": "Need help? Write to us and tell us which game — we answer every message.", "t24": "I bought something but don’t see it.", "t25": "Open the Shop and tap <i>Restore purchases</i>. Make sure you are signed in with the same Apple Account.", "t26": "How do I change language?", "t27": "Menu (⚙) → Language. The game uses your iPhone language by default.", "t28": "How do I change my ad privacy choices?", "t29": "Menu (⚙) → Privacy choices, or iOS Settings → Privacy &amp; Security → Tracking.", "t30": "How do I start over?", "t31": "Menu (⚙) → Reset game. Purchases can be restored afterwards.", "t32": "Refunds", "t33": "Purchases are handled by Apple:", "t34": "Privacy Policy", "t35": "Moonbeam Studio · Lulu series n°1", "t36": "Build your dream amusement park with Lulu, from a 1930s village fair all the way to the Moon.", "t37": "Coming soon on the", "t38": "Six parks, six eras", "t39": "Explore each world.", "t40": "The Village Fair", "t41": "The Pier", "t42": "The Grand Park", "t43": "Tropicalia", "t44": "Neon City", "t45": "Lunaria", "t46": "Why you’ll love it", "t47": "Rides that come alive", "t48": "Carousels, Ferris wheels and roller coasters spin, light up and fill with happy visitors.", "t49": "Grow while you rest", "t50": "Your park keeps earning while you are away. Come back to a pile of coins.", "t51": "Special nights", "t52": "Fireworks, quests and talents keep every session full of little surprises.", "t53": "Need help?", "t54": "Also discover Lulu Museum", "t55": "Moonbeam Studio · Lulu series n°2", "t56": "Reopen an old museum whose exhibits come alive: mummies wave, dinosaurs roar and robots serve tea.", "t57": "Six wings to restore", "t58": "The Cabinet of Curiosities", "t59": "Egypt of the Pharaohs", "t60": "The Dinosaur Hall", "t61": "The Age of Pirates", "t62": "Samurai Japan", "t63": "The Museum of the Future", "t64": "living exhibits", "t65": "Tap an exhibit and watch it put on a show for the crowd gathered around it.", "t66": "rare pieces", "t67": "Restore every exhibit, find the rare pieces and complete your collection album.", "t68": "A museum full of life", "t69": "Visitors arrive from the street, school groups visit, and Lulu explores every room.", "t70": "Also discover Lulu Park", "t71": "Page not found", "t72": "Lulu looked everywhere, even on the Moon, but this page doesn’t exist.", "t73": "Back to the studio", "t74": "", "t79": "App Store"};
