@@ -50,7 +50,7 @@
     }
 
     // barre de progression, défilement des captures, parallaxe tactile : une seule mise à jour par image
-    var bar = document.querySelector('.progress'), stage0 = document.querySelector('.stage'), rails = [], ticking = false;
+    var bar = document.querySelector('.progress'), stage0 = document.querySelector('.stage, .posterbox'), rails = [], ticking = false;
     function update() {
       ticking = false;
       var h = document.documentElement, y = h.scrollTop, p = y / Math.max(1, h.scrollHeight - h.clientHeight);
@@ -62,6 +62,9 @@
         var q = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - innerHeight)));
         o.track.style.transform = 'translate3d(' + (-q * o.max).toFixed(1) + 'px,0,0)';
         o.rail.style.setProperty('--q', q.toFixed(3));
+        // l'époque au centre de l'écran donne sa couleur au fond et se met en avant
+        var k = Math.round(q * (o.figs.length - 1));
+        if (k !== o.k) { o.k = k; o.rail.style.setProperty('--tint', o.figs[k].dataset.tint || 'transparent'); o.figs.forEach(function (f, j) { f.classList.toggle('cur', j === k); }); }
       });
     }
     function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
@@ -75,7 +78,7 @@
         rail.classList.add('on');
         var max = track.scrollWidth - innerWidth;
         rail.style.height = (max * (innerWidth > 860 ? 1.6 : 1.2) + innerHeight) + 'px';
-        rails.push({ rail: rail, track: track, max: max });
+        rails.push({ rail: rail, track: track, max: max, figs: $$('figure', track), k: -1 });
       });
       update();
     }
@@ -99,7 +102,7 @@
     if (!fine) return;
 
     // halo qui suit le curseur + parallaxe du héros
-    var glow = document.querySelector('.glow'), stage = document.querySelector('.stage');
+    var glow = document.querySelector('.glow'), stage = document.querySelector('.stage, .posterbox');
     var pm = null;
     addEventListener('pointermove', function (e) { if (!pm) requestAnimationFrame(function () { movePointer(pm); pm = null; }); pm = e; });
     function movePointer(e) {

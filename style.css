@@ -308,3 +308,27 @@ em .w > span { background: linear-gradient(90deg, var(--gold), var(--gold2)); -w
 .game > img, .game::before, .game::after { border-radius: inherit; }
 .game:hover > img { transform: none; }
 .game[data-tilt] { transform-style: flat; }
+
+/* ===== pages des jeux : orbite de Lulu, époques colorées ===== */
+.posterbox { grid-column: 3; grid-row: 1 / span 2; position: relative; width: 100%; }
+.ghero .poster { grid-column: auto; grid-row: auto; position: relative; z-index: 1; transform: rotate(2.5deg) translate(calc(var(--mx, 0) * -18px), calc(var(--my, 0) * -14px)); animation: none; }
+.ring { position: absolute; inset: -4% -16%; border-radius: 50%; border: 1px dashed rgba(255,220,150,.22); animation: spin 70s linear infinite; z-index: 2; pointer-events: none;
+  translate: calc(var(--mx, 0) * 26px) calc(var(--my, 0) * 18px); transition: translate .5s ease-out; }
+.sat { position: absolute; left: 50%; top: 50%; width: 0; height: 0; transform: rotate(var(--a)) translateX(min(250px, 33vw)) rotate(calc(-1 * var(--a))); }
+.sat img { position: absolute; max-width: none; width: 74px; left: -37px; top: -50px; filter: drop-shadow(0 8px 12px rgba(0,0,0,.45)); animation: spin 70s linear infinite reverse, bob 3s ease-in-out infinite; }
+.sat:nth-child(2n) img { animation-delay: 0s, -1.5s; }
+@keyframes bob { 50% { translate: 0 -10px; } }
+@media (max-width: 860px) { .posterbox { grid-column: 1; grid-row: 1; max-width: 300px; } .ring { inset: -6% -14%; } .sat { transform: rotate(var(--a)) translateX(min(190px, 46vw)) rotate(calc(-1 * var(--a))); } .sat img { width: 54px; left: -27px; top: -36px; } }
+
+.rail .sticky { transition: background-color .8s; background: radial-gradient(60% 55% at 50% 58%, color-mix(in srgb, var(--tint, transparent) 45%, transparent), transparent 75%); }
+.rail.on .sticky { transition: background .8s; }
+.shots figure .phone { transition: scale .5s cubic-bezier(.2,.7,.2,1), filter .5s, rotate .5s; }
+.rail.on .shots figure:not(.cur) .phone { scale: .92; filter: saturate(.7) brightness(.8); }
+.rail.on .shots figure.cur .phone { scale: 1.03; rotate: 0deg; box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 60px color-mix(in srgb, var(--tint, #fff) 60%, transparent), inset 0 0 0 1.5px rgba(255,255,255,.25); }
+figcaption { display: flex; align-items: center; justify-content: center; gap: 8px; }
+figcaption .mini { width: 40px; height: 40px; object-fit: contain; transition: transform .5s cubic-bezier(.3,1.6,.5,1); }
+.rail.on figure.cur figcaption { color: var(--ink); }
+.rail.on figure.cur figcaption .mini { transform: translateY(-6px) scale(1.25) rotate(-6deg); }
+.feats .ill { width: 110px; height: 110px; object-fit: contain; margin: -6px 0 2px; filter: drop-shadow(0 10px 16px rgba(0,0,0,.4)); transition: transform .5s cubic-bezier(.3,1.6,.5,1); }
+.feats div:hover .ill { transform: translateY(-8px) rotate(-6deg) scale(1.08); }
+.feats [data-tilt] { transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); }
