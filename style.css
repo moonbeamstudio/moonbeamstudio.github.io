@@ -70,7 +70,8 @@ img { display: block; max-width: 100%; }
 /* téléphones (maquettes) */
 .phone { position: relative; width: 240px; aspect-ratio: 1320/2868; border-radius: 40px; padding: 9px;
   background: linear-gradient(145deg, #4a4566, #19162e); box-shadow: 0 30px 80px rgba(0,0,0,.55), inset 0 0 0 1.5px rgba(255,255,255,.18); }
-.phone img, .phone video { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 32px; background: #111; }
+/* le jeu n'a pas de barre d'état : on lui laisse la zone de sécurité d'un iPhone (bande sous l'encoche, bande du bas) pour que les coins arrondis ne mordent pas les compteurs */
+.phone img, .phone video { display: block; width: 100%; height: 100%; box-sizing: border-box; padding: 15% 0 8.5%; object-fit: contain; border-radius: 32px; background: #0b0a14; }
 .phone::after { content: ""; position: absolute; top: 18px; left: 50%; width: 30%; height: 20px; transform: translateX(-50%); background: #000; border-radius: 999px; }
 .stage { position: relative; height: 560px; }
 .stage .phone { position: absolute; }
