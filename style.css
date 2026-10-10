@@ -277,6 +277,10 @@ em .w > span { background: linear-gradient(90deg, var(--gold), var(--gold2)); -w
 /* Lulu Museum : nuit au musée, bleu profond et or des vitrines */
 .t-museum { --night: #13122b; --night-end: #0a0918; --sky1: #2d2a6e; --sky2: #5a3a1c; --gold: #ffcf6b; --gold2: #e89a3c; --muted: #d4cbe8; }
 .t-museum .glow { background: radial-gradient(circle, rgba(255,190,100,.16), transparent 60%); }
+/* Lulu Zoo : soir sur le sanctuaire, vert profond et lagon */
+.t-zoo { --night: #0f2a22; --night-end: #071a14; --sky1: #1f7a5a; --sky2: #8a5a2a; --gold: #ffd36b; --gold2: #ff9a5a; --muted: #cfe8d8; }
+.t-zoo .glow { background: radial-gradient(circle, rgba(140,230,170,.14), transparent 60%); }
+.t-zoo .nav { background: rgba(15,42,34,.6); }
 .t-park .ghero::before { background: linear-gradient(90deg, var(--night) 10%, rgba(12,45,63,.55) 60%, rgba(12,45,63,.25)), linear-gradient(transparent 70%, var(--night)); }
 
 /* ===== page Confidentialité ===== */

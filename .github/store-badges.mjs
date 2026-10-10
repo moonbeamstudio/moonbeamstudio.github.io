@@ -1,10 +1,10 @@
 // Badges App Store automatiques : dès qu'un jeu est en vente (API publique iTunes Lookup),
 // remplace « Bientôt sur l'App Store » par un lien vers le jeu (badge maison du site).
-// Lancé chaque jour par .github/workflows/store-badges.yml ; aussi à lancer avant de republier le site depuis idle-musee/site.
+// Lancé chaque jour par .github/workflows/store-badges.yml ; aussi à lancer avant de republier le site depuis idle-zoo/site (sources du site depuis le jeu n°3).
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
-const APPS = { park: '6819715394', museum: '6820851219' };
+const APPS = { park: '6819715394', museum: '6820851219' }; // ponytail: ajouter zoo: '<identifiant>' dès que l'app Lulu Zoo existe dans App Store Connect
 let changed = false;
 for (const [game, id] of Object.entries(APPS)) {
   const r = await (await fetch(`https://itunes.apple.com/lookup?id=${id}&country=us`)).json();
