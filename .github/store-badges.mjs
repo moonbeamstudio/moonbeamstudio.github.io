@@ -4,7 +4,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
-const APPS = { park: '6819715394', museum: '6820851219' }; // ponytail: ajouter zoo: '<identifiant>' dès que l'app Lulu Zoo existe dans App Store Connect
+const APPS = { park: '6819715394', museum: '6820851219', zoo: '6821373972' };
 let changed = false;
 for (const [game, id] of Object.entries(APPS)) {
   const r = await (await fetch(`https://itunes.apple.com/lookup?id=${id}&country=us`)).json();
