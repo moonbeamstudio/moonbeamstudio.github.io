@@ -84,7 +84,8 @@
       $$('.rail').forEach(function (rail) {
         var track = rail.querySelector('.shots');
         rail.classList.remove('on'); track.style.transform = ''; rail.style.height = '';
-        var on = !still && track.scrollWidth > innerWidth + 40;
+        // écran tactile : glissement horizontal natif (le défilement piloté saccade avec la barre de Safari qui redimensionne la page)
+        var on = !still && fine && track.scrollWidth > innerWidth + 40;
         if (!on) return;
         rail.classList.add('on');
         var max = track.scrollWidth - innerWidth;

@@ -408,3 +408,9 @@ body { overflow-x: clip; }
 .mail { display: inline-flex; align-items: center; gap: 8px; }
 .rail.on .sticky { padding-top: 64px; }
 @media (max-width: 600px) { .rail.on .sticky { justify-content: flex-start; padding-top: 84px; } }
+/* téléphone et tablette : carrousel natif à glisser, un iPhone centré, nom en entier sous chaque capture */
+@media (pointer: coarse) {
+  .shots { padding: 10px calc(50vw - 115px) 40px; scroll-padding-inline: calc(50vw - 115px); -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  .shots figure { width: 230px; scroll-snap-stop: always; }
+  .shots figcaption { flex-wrap: wrap; line-height: 1.25; }
+}
