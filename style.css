@@ -261,7 +261,7 @@ em .w > span { background: linear-gradient(90deg, var(--gold), var(--gold2)); -w
 .ghero .poster { transition: rotate .6s; } .ghero .poster:hover { rotate: -1deg; }
 
 /* ===== logo, Lulu sur la lune, illustrations ===== */
-.brand img.logo { width: 34px; height: 34px; border-radius: 50%; box-shadow: 0 0 0 1.5px rgba(255,207,107,.35), 0 0 18px rgba(255,190,90,.35); }
+.brand img.logo { width: 34px; height: 34px; border-radius: 22%; box-shadow: 0 0 18px rgba(255,190,90,.25); }
 .stage { height: 620px; }
 .stage .p1 { top: 150px; } .stage .p2 { top: 110px; }
 .moon { left: 50%; top: 10px; width: 260px; height: 260px; margin-left: -130px; background: radial-gradient(circle, rgba(255,215,130,.55), rgba(255,180,90,.12) 55%, transparent 70%); box-shadow: none; filter: blur(8px); }
